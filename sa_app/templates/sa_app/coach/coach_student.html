@@ -1,0 +1,13 @@
+{% load static %} {% include 'sa_app/common/common_css.html' %}
+{% include 'coach/coach_header.html' %}
+{% for d in data_key %}
+Your Student
+
+Student's Name : {{d.admission.name}}
+Student's Phone No. : {{d.admission.phone}}
+Student's Email : {{d.admission.email}}
+Student's Gender : {{d.admission.gender}}
+Student's Sports Plan : {{d.admission.sport_plan}}
+Sport Name : {{d.admission.sports_name}}
+{%endfor%}
+{% include 'sa_app/common/footer.html' %}

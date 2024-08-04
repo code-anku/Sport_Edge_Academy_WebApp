@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    {% include 'sa_app/common/common_css.html' %}
+</head>
+<body>
+    {% include 'sa_app/common/header.html' %}
+    <div class="dabba" >
+      <form method="post"  action="/admission/">
+        {%csrf_token%}
+        <div class="headline">
+          <h3 class="text-center"> Admission Form</h3>
+
+
+        </div>
+        <div class="mb-3 form-floating d-block mx-auto" style="width: 500px; height: fit-content;">
+        <div class="content " >
+          <div class="box1">
+            <input class="mb-3 form-control" type="text " id="name" placeholder="Name" required>
+            <label class="mb-3 form-label" for ="">Name</label>
+          </div>
+        </div>
+        <div class="box2">
+          <input class="mb-3 form-control" type="text" id="email" name="email" placeholder="Email" required>
+          <label class="mb-3 form-label" for ="">Email</label>
+
+        </div>
+        <div class="box3" style="display: flex;">
+          <div>
+            <select name="city" id="city">
+              <option value="">City</option>
+              <option value="Barabanki">Barabanki</option>
+              <option value="Lucknow">Lucknow</option>
+              <option value="Kanpur">Kanpur</option>
+              <option value="Gorkhapur">Gorkhapur</option>
+              <option value="Kushinagar">Kushinagar</option>
+              <option value="Deoria">Deoria</option>
+              <option value="MaharajGanj">MaharajGanj</option>
+
+            </select>
+          </div>
+
+        </div>
+        <div>
+          <input class="mb-3 form-control" type="text" id="phone"name="phone" placeholder="Phone No." required>
+          <label class="mb-3 form-label" for ="">Phone</label>
+        </div>
+        <div class="box6" style="display:flex;">
+          <div>
+            <input class="mb-3 form-control" type="number" id="age" name="age" placeholder="Age" required>
+            <label class="mb-3 form-label" for ="">Age</label>
+          </div>
+             <div style="float:right;display: flex;color:white;">
+              <label class="mb-3 form-label" for ="gender">Gender</label>
+              <div>
+                <input class="mb-3 form-control" type="radio" id="male" name="gender" value="M">
+                <label class="mb-3 form-label" for ="male">MALE</label>
+              </div>
+              <div>
+                <input class="mb-3 form-control" type="radio" id="female" name="gender" value="F">
+                <label class="mb-3 form-label" for ="female">FEMALE</label>
+              </div>
+            </div>
+        </div>
+        <div class="box8" style="display: flex;">
+          <div>
+            <input class="mb-3 form-control" type="text " id="date_of_birth" name="date_of_birth" placeholder="Date of Birth"required>
+            <label class="mb-3 form-label" for ="">date_of_birth</label>
+
+          </div>
+            <div style="color: white;">
+              <input class="mb-3 form-control" type="file" id="photo" placeholder="Photo" required>
+              <label class="mb-3 form-label" for ="">Photo</label>
+            </div>
+        </div>
+        <div class="box9">
+          <input class="mb-3 form-control" type="text" id="mother_name" name="mother_name" placeholder="Mother Name" required>
+          <label class="mb-3 form-label" for ="">mother_name</label>
+          
+        </div>
+        <div class="box10">
+          <input class="mb-3 form-control" type="text" id="father_name" name="father_name" placeholder="Fother Name" required>
+          <label class="mb-3 form-label" for ="">father_name</label>
+          
+        </div>
+        <div class="box11" style="display: flex;">
+          <input class="mb-3 form-control" type="number" id="alternate_no" name="alternate_no" placeholder="Alternate No." required>
+          <label class="mb-3 form-label" for ="">alternate_no</label>
+          <div >
+            <input class="mb-3 form-control" type="date" id="date" name="date" placeholder="Date" required>
+            <label class="mb-3 form-label" for ="">Date</label>
+
+          </div>
+        </div>
+        <div class="box12" style="display: flex;">
+          <div>
+            <select name="sport_plan" id="sport_plan">
+              <option value="">Select Sports Plan</option>
+              {% for p in plan_key%}
+              <option value="{{p.plan_name}}">{{p.plan_plan}}</option>
+              {%endfor%}
+            </select>
+          </div>
+          <div style="float: right; display: flex; color: white;">
+            <label class="mb-3 form-label" for="mode" class="mode">Fee</label>
+            <div>
+              <input class="mb-3 form-control" type="radio" id="offline" name="mode" value="offline">
+              <label class="mb-3 form-label" for="offline">offline</label>
+            </div>
+            <div>
+              <input class="mb-3 form-control" type="radio" id="online" name="mode" value="online">
+              <label class="mb-3 form-label" for="omline">online</label>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box13">
+          <!-- <input class="mb-3 form-control" type="text" id="sports_name" name="sports_name" placeholder="Sports Name" required> -->
+          <select name="sports_name" id="sports_plan">
+            <option value=""> Select Sports</option>
+            {% for s in sports_key%}
+            <option value="{{s.sports_name}}">{{s.sports_name}}</option>
+            {%endfor%}
+
+          </select>
+
+        </div>
+        <div class="box14" style="display: flex;">
+          <div>
+            <input class="mb-3 form-control" type="date" id="date" name="date" placeholder="Date" required>
+            <label class="mb-3 form-label" for ="gender">Date</label>
+
+          </div>
+          <div style="float: right;">
+            <input class="mb-3 form-control" type ="date" id="date" name="date" placeholder ="Date" required>
+
+          </div>
+          <div style="float: right;">
+            <input class="mb-3 form-control" type="number " id="transaction_no"  name="transaction_no" placeholder="transaction No" required>
+
+          </div>
+
+        </div>
+        <div>
+          <button class="reg_btn" role="button">Register</button>
+        </div>
+
+
+
+
+
+
+      </form>
+    </div>
+
+    </div>
+
+    {% include 'sa_app/common/footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+ {% include 'sa_app/common/common_css.html' %}
+{% include 'student/student_header.html' %}
+Your Coach
+
+Coach Name : {{data_key.trainer.name}}
+Coach Phone No. : {{data_key.trainer.phone}}
+Coach Email : {{data_key.trainer.email}}
+Coach Gender : {{data_key.trainer.gender}}
+Coach Address : {{data_key.trainer.address}}
+Sport Name : {{data_key.trainer.sport_name}}
+About Coach : {{data_key.trainer.about_coach}}
+Area Of Interest : {{data_key.trainer.area_of_interest}}
+{% include 'sa_app/common/footer.html' %}
+</body>
+</html>

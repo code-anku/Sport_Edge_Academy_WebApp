@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA_APP</title>
+    {% include 'sa_app/common/common_css.html' %}
+</head>
+<body>
+    {% include 'sa_app/common/header.html' %}
+    
+<h1 class="text-center my-4 w-75 d-block mx-auto p-2" style="border: 1px solid black; border-radius: 2rem; font-weight: 700; font-size: 4rem;"> This is about us page </h1>
+
+<div class="container d-block mx-auto w-75 p-4" style="border: 1px solid black; border-radius: 2rem;">
+    <h2>  A Sport Academy is defined as a registered organization that exists to promote 
+        and develop interest in a particular sport or physical activity. The Sporting Edge Academy is a 
+        web-based platform designed to provide a comprehensive solution for a specific sport academy 
+        to manage its sports activities and operations. This web application is aimed at streamlining the 
+        processes of registration/ admission, scheduling, payment and communication.
+        </h2>
+    <div style="display: flex; justify-content: space-evenly; margin-top: 3vw;">
+        <img style="height: 200px; width: 200px; border-radius: 2rem;" src="{%static 'sa_app/images/pic13.jpg'%}" alt="">
+        <img style="height: 200px; width: 200px; border-radius: 2rem;" src="{%static 'sa_app/images/pic12.jpg'%}" alt="">
+        <img style="height: 200px; width: 200px; border-radius: 2rem;" src="{%static 'sa_app/images/pic14.jpg'%}" alt="">
+        <img style="height: 200px; width: 200px; border-radius: 2rem;" src="{%static 'sa_app/images/pic15.jpg'%}" alt="">
+        <img style="height: 200px; width: 200px; border-radius: 2rem;" src="{%static 'sa_app/images/pic16.jpg'%}" alt="">
+    </div>
+</div>
+
+
+
+
+    {% include 'sa_app/common/footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

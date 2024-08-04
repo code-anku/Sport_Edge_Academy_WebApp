@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'sa_app/common/common_css.html' %}
+    <!-- <link rel="stylesheet" href="{% static 'sa_app/css/courier.css' %}"> -->
+</head>
+<body>
+    {% include 'sa_app/common/header.html' %}
+      <!-- plans templates starts here  -->
+      <!-- <section id="pricing" class="pricing-content section-padding"></section> -->
+    <div class="d-flex justify-content-center mt-4">
+        {% for p in plan_key %}
+          <div class="card m-2" style="width: 30vw; height: 40vh; padding: 2vh;">
+            <div class="single - pricing" id="{{p.plan_name}}">
+              <h2 class="card-title">{{ p.plan_name}}</h2>
+              <p class="card-text">{{ p.plan_duration}}</p>
+              <p class="card-text">{{ p.facilities}}</p>
+              <p class="card-text">{{ p.charges}}</p>
+              <a href="{{'/admission/'}}" class="btn btn-primary">Get plan</a>
+            </div>
+        </div>
+
+        {%endfor%}
+        <!-- <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {% include 'sa_app/common/footer.html' %}
+
+
+
+
+
+
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

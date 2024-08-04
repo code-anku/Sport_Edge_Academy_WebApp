@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Login </title>
+    {% include 'sa_app/common/common_css.html'%}
+    <style>
+      .frm{
+        width: 50vw;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      label{
+        text-align: end;
+      }
+      input{
+        border-radius: 2vh !important;
+        text-align: center;
+        margin: 1vh;
+      }
+    </style>
+</head>
+<body>
+    {%include 'sa_app/common/header.html'%}
+    <h1 style="text-align: center; margin-top: 2vh;"> Coach  Login Page</h1>
+<div class="frm">
+    <form action="/coach_login/" method="post" novalidate class="needs-validation">
+      {% csrf_token %}
+        <div class="#" style="display: flex; justify-content: center;">
+          <img src="data:image/png;base64,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" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <div>
+          <label for="uname"><b>User ID</b></label>
+          <input style="margin-left: 3.5vh; " type="text" placeholder="Enter Username" name="coach_id" required>
+          <div class="invalid-feedback">
+            Enter Coach ID
+          </div>
+        </div>
+
+        <div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <div class="invalid-feedback">
+            Enter Password
+          </div>
+        </div> <br>
+          <button style="margin-left: 14.5vh;" class=" btn btn-danger w-50" type="submit" class="cancelbtn">Login</button>
+          <!-- <label>
+            <input style="margin-left: 10vh;" type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+          <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+        <!-- <a href="{{'/coach/'}}"</a> -->
+      </form>
+    </div>
+
+    
+    
+    
+      {%include 'sa_app/common/footer.html'%}
+      <script src="{%static 'sa_app/js/validation.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTS ACADEMY</title>
+   
+     <link rel="stylesheet" href="{% static 'sa_app/css/courier.css'%}">
+   {%include 'sa_app/common/common_css.html'%}
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  
+   <style>
+  
+    a:hover{
+      background-color: transparent !important;
+    }
+    </style>
+
+
+
+</head>
+<body>
+  
+    <header>
+        <h2 href="#"><span style="background-color:darkorchid">SPORTS ACADEMY</span></h2>
+        <nav>
+        
+<!--         
+                    <div class="dropdown">
+            <button class="dropbtn" style="background-color: darkorchid;color: cornsilk;">Login</button>
+            <div class="dropdown-content">
+            <a href="{{'/coach_login/'}}" >Coach</a>
+            <a href="{{'/student_login/'}}">Student</a>
+            
+            </div>
+          </div> -->
+           <!-- <li><a href="/CourierConnect/commonjsp/registration.jsp" style="color: yellow;font-weight: bold;background-color: blue">Registration</a> </li> 
+       --> <li><a href="{{'/feedback/'}}" style="font-weight: bold;background-color: darkorchid;color: cornsilk">Feedback</a> </li>
+            <li><a href="{{'/contact_us/'}}" style="color: yellow;font-weight: bold;background-color: darkorchid;color: cornsilk">Contact Us</a> </li>
+            <li><a href="{{'/sports/'}}" style="font-weight: bold;background-color: darkorchid;color: cornsilk">Our Sports</a> </li>
+          <!-- <li><a href="/CourierConnect/commonjsp/provider_details.jsp" style="color: yellow;font-weight: bold;background-color: darkorchid;color: cornsilk">ProviderDetails</a> </li> -->
+          
+           <!-- <li><a href="/CourierConnect/commonjsp/showOffer.jsp" style="color: yellow;font-weight: bold;background-color: darkorchid;color: cornsilk">Offers</a> </li> -->
+         
+            <!-- <div class="dropdown">
+<span style="color: yellow;font-weight: bold;background-color: blue">Login</span>
+
+
+<div class="dropdown-content">
+
+<a href="#">User</a>
+<a href="#">Provider</a>
+
+</div>
+</div> -->
+
+
+
+
+
+<li><a href="{{'/events/'}}" style="color: yellow;font-weight: bold;background-color: darkorchid;color: cornsilk"> News & Updates</a> </li>                  
+<li><a href="{{'/plans/'}}" style="color: yellow;font-weight: bold;background-color: darkorchid;color: cornsilk"> Our Plans</a> </li>         
+               <div class="dropdown" >
+            <button class="dropbtn" style="color: cornsilk"> Login </button>
+            <div class="dropdown-content">
+                <a href="{{'/coach_login/'}}" >Coach</a>
+                <a href="{{'/student_login/'}}">Student</a>
+            </div>
+          </div>
+          
+               
+               
+             </li>
+           <li><a href="{{'/about_us/'}}" style="color: cornsilk;font-weight: bold;background-color: darkorchid">Aboutus</a> </li>
+           
+        </nav>
+        </header>
+        
+        <section class="hero">
+        <div class="background-image" style="background-image: url(/CourierConnect/images/courierindex.jpg)"></div>
+            <div class="hero-content-area">
+            <h1 style="color:deepskyblue">Best Sports Services </h1>
+                <h3 class="abc"> <span style="background-color:deepskyblue ">Provide Better Sports Services</span></h3>
+            <a href="{{'/admission/'}}" class="btn">ADMISSION</a>
+            </div>
+            
+        </section>
+    
+    <section class="destinations">
+    <h3 class="title">Our Sports Services is here</h3>
+        <!-- <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>` -->
+        <hr>
+
+  <!-- view feedback code start here -->
+  
+  <!-- {% for e in feedback_key %}
+
+  <div class="card mt-5" style="width: 18rem;float:left;margin-left: 20px;">
+     <img src="/media/{{e.event_pic}}" class="card-img-top" alt="..."> -->
+    <!-- <div class="card-body">
+      <h5 class="card-title">{{e.name}}</h5> -->
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <!-- </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Email :  {{e.email}}</li>
+      <li class="list-group-item">Date : {{e.date}}</li>
+      <li class="list-group-item"> {{e.rating}}</li>
+      <li class="list-group-item"> {{e.remarks}}</li>
+    </ul>  -->
+    <!-- <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> -->
+  <!-- </div> -->
+
+<!-- <h2>{{e.event_name}}</h2>
+<h2>{{e.event_vanue}}</h2> -->
+
+<!-- {%endfor%} -->
+
+  <!-- view feedback code  ends here-->
+  
+
+
+        <div style="width: 100%;height: auto;margin-left: 90px;">
+        <div class="card" style="width: 20rem;float: left">
+<img class="card-img-top" src="{%static 'sa_app/images/cricpic1.jpg'%}" alt="Card image cap">
+<div class="card-body" style="margin-left: 0px;">
+<h5 class="card-title abc">CRICKET</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="{{'/sports/'}}" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: 20rem;float: left;margin-left:5%">
+<img class="card-img-top" src="{%static 'sa_app/images/hockeypic1.jpg'%}">
+<div class="card-body">
+<h5 class="card-title abc">HOCKEY</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="{{'/sports/'}}" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+
+<div class="card" style="width: 20rem;float: left;margin-left:5%">
+<img class="card-img-top" src="{%static 'sa_app/images/footballpic1.jpg'%}">
+<div class="card-body">
+<h5 class="card-title abc">FOOTBALL</h5>
+<p class="card-text">Some quick example text to build on the card title and make  .</p>
+<a href="{{'/sports/'}}" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<!-- <div class="card" style="width: 18rem;float: left;margin-left:5%">
+<img class="card-img-top" src="{%static 'sa_app/images/atheleticpic1.jpg'%}" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title abc">ATHELETIC</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div> -->
+
+</div>
+
+        </section>
+
+ <!-- feedbacks code -->
+<h3 style="text-align: center;"> Our Feedbacks </h3> <hr>
+ <div class="d-flex justify-content-center">
+    {%for f in feedback_key%}
+    <div class="card mt-5" style="height: 40vh; width: 25vw; margin: 3vh;">
+    <div class="card-body">
+        <h5 class="card-title"> Name:{{f.name}}</h5>
+        <p class="card_text"> Your Review : {{f.remarks}}</p>
+        <p class="card_text"> Your Ratings : {{f.rating}}</p>
+        <p class="card_text"> Date : {{f.date}}</p>
+
+
+
+
+
+        </div>
+
+    </div>
+    {%endfor%}
+</div>
+<a href="{{'/more_feedback/'}}" >Click here to show more >>>></a>
+
+
+
+
+       
+    
+   
+
+<footer>
+    <ul>
+        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+    </ul>
+
+    <!-- feedbacks code
+
+<div class="row">
+    {%for f in feedback_key%}
+
+    <div class="col_4">
+    <div class="card">
+    <div class="card-body">
+        <h5 class="card-title"> Name:{{f.name}}</h5>
+        <p class="card_text"> Your Review : {{f.remarks}}</p>
+        <p class="card_text"> Your Ratings : {{f.ratings}}</p>
+
+
+         </div>   
+
+
+
+        </div>
+
+    </div>
+    {%endfor%}
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>MADE BY ANKIT KUMAR SINGH </p>
+    <p>@copyright 2024</p>
+</footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+</body>
